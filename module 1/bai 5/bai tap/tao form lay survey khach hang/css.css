@@ -6,6 +6,22 @@ hr{
     height:1px;
 }
 table{
-    table-layout: fixed;
+    border-collapse: collapse;
     width: 100%;
+}
+td,th{
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+}
+th{
+    font-size: 16px;
+    text-align: center;
+    padding: 20px;
+    background-color: silver;
+}
+td{
+    font-size: 16px;
+    padding: 20px 20px 20px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
 }
