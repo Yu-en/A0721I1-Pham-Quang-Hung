@@ -1,0 +1,16 @@
+body{
+    background-color: orange;
+    padding: 50px;
+}
+table{
+    width: 90%;
+}
+th{
+    padding: 30px;
+    border: orange;
+    border-bottom: orange;
+}
+td{
+    padding: 20px;
+    border: 0px;
+}
