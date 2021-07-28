@@ -3,14 +3,18 @@ body{
     padding: 50px;
 }
 table{
-    width: 90%;
+    width: 60%;
+    border-collapse: collapse;
+    padding: 20px;
 }
 th{
+    font-size: 16px;
+
     padding: 30px;
-    border: orange;
-    border-bottom: orange;
+
 }
 td{
+
     padding: 20px;
     border: 0px;
 }
