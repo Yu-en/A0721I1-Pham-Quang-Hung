@@ -1,3 +1,14 @@
-td{
+tr{
     text-align: center;
+}
+button{
+    background: mediumpurple;
+    color: white;
+    border-color: lightblue;
+}
+table{
+    width: 50%;
+}
+script{
+
 }

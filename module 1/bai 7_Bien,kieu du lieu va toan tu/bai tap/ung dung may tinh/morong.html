@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hùng</title>
+    <link rel="stylesheet" href="morong.css">
+</head>
+<body>
+<div class="container">
+    <table border="1" cellspacing="0" align="center">
+        <tr>
+            <td colspan="4" id="input">0</td>
+        </tr>
+        <tr>
+            <td colspan="3"><button type="button" onclick="btn(this)">AC</button></td>
+            <td><button onclick="btn(this)">/</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="btn(this)">7</button></td>
+            <td><button onclick="btn(this)">8</button></td>
+            <td><button onclick="btn(this)">9</button></td>
+            <td><button onclick="btn(this)">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="btn(this)">4</button></td>
+            <td><button onclick="btn(this)">5</button></td>
+            <td><button onclick="btn(this)">6</button></td>
+            <td><button onclick="btn(this)">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="btn(this)">1</button></td>
+            <td><button onclick="btn(this)">2</button></td>
+            <td><button onclick="btn(this)">3</button></td>
+            <td><button onclick="btn(this)">+</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button onclick="btn(this)">0</button></td>
+            <td><button onclick="btn(this)">.</button></td>
+            <td><button onclick="btn(this)">=</button></td>
+
+        </tr>
+    </table>
+</div>
+<script>
+    let input=document.getElementById("input");
+    function btn(obj) {
+        let a=obj.innerHTML;
+        if (a=="="){
+                input.innerHTML=eval(input.innerHTML);
+        }else if (a=="AC"){
+            input.innerHTML="";
+        }else {
+            if (input.innerHTML=="0"){
+                input.innerHTML=a;
+            }else {
+                input.innerHTML+=a;
+            }
+        }
+    }
+</script>
+</body>
+</html>

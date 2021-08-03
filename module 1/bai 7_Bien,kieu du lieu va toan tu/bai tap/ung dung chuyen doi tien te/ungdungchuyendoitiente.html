@@ -6,44 +6,45 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<form>
+<table align="center">
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="input"></td>
+        <td>
+            <select id="option1">
+                <option value="VNĐ">VietNam</option>
+                <option value="USD">USD</option>
+            </select>
 
-<form action="#" >
-    <table align="center">
-        <tr>
-            <th>Amount</th>
-            <th>From Currency</th>
-            <th>To Currency</th>
-            <th>&nbsp;</th>
-        </tr>
-        <tr>
-            <td><label><input type="text" name="number" id="amount" ></label></td>
-            <td>
-                <select id="1">
-                <option id="VND">VietNam</option>
-                <option id="USD">USD</option>
-                </select>
-            </td>
-            <td>
-                <select id="2">
-                <option>USD</option>
-                <option>VietNam</option>
-                </select>
-            </td>
-            <td>
-                <label ><button type="button" style="background-color: mediumpurple;color:white">Convert</button></label>
-            </td>
-        </tr>
-    </table>
-
+        </td>
+        <td>
+            <select id="option2">
+                <option value="USD">USD</option>
+                <option value="VNĐ">VietNam</option>
+            </select>
+        </td>
+        <td><button onclick="convert()">Convert</button></td>
+    </tr>
+</table>
 </form>
-<script >
-    function convert() {
-        let x=document.getElementById("amount");
-        let a=document.getElementById("1");
-        let b=document.getElementById("2");
-        x=parseInt(x);
-        if(choice==a){
-
+<script>
+    function convert(){
+        let input=document.getElementById("input").value;
+        let option1=document.getElementById("option1").value;
+        let option2=document.getElementById("option2").value;
+        if (option1=="USD" && option2=="VNĐ"){
+            document.write("Result: " +input*22955 +" VNĐ");
+        }
+         else if (option1=="VNĐ" && option2=="USD"){
+            document.write("Result: "+input/22955+" USD");
+        }
+        else if(option1==option2){
+            alert("Error");
         }
     }
 </script>
