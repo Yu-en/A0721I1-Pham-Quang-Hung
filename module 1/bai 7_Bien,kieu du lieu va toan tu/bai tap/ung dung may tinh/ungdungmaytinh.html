@@ -14,7 +14,8 @@
     <button type="button" onclick="Subtraction()" value="-">Subtraction(-)</button>
     <button type="button" onclick="Multiplication()" value="*">Multiplication(*)</button>
     <button type="button" onclick="Division()" value="/">Division(/)</button>
-
+    <br/><br/>
+    <p id="rs"></p>
 </form>
 <script>
     function Addition() {
@@ -22,31 +23,36 @@
         let number2=document.getElementById("number2").value;
         let n1=parseInt(number1);
         let n2=parseInt(number2);
-        document.write("Result Addition: "+(n1+n2));
+        let result=n1+n2;
+        document.getElementById("rs").innerHTML="Result Addition: "+result;
     }
     function Subtraction() {
         let number1=document.getElementById("number1").value;
         let number2=document.getElementById("number2").value;
         let n1=parseInt(number1);
         let n2=parseInt(number2);
-        document.write("Result Subtraction: "+(n1-n2));
+        let result=n1-n2;
+        document.getElementById("rs").innerHTML="Result Subtraction: "+result;
     }
     function Multiplication() {
         let number1=document.getElementById("number1").value;
         let number2=document.getElementById("number2").value;
         let n1=parseInt(number1);
         let n2=parseInt(number2);
-        document.write("Result Multiplication: "+(n1*n2));
+        let result=n1*n2;
+        document.getElementById("rs").innerHTML="Result Multiplication: "+result;
     }
     function Division() {
         let number1=document.getElementById("number1").value;
         let number2=document.getElementById("number2").value;
         let n1=parseInt(number1);
         let n2=parseInt(number2);
+        let result;
         if (n2==0){
-            alert("Can't division for 0");
+            alert("Error!!!!!!!!");
         }else {
-            document.write("Result Division: "+(n1/n2));
+            result=n1/n2;
+            document.getElementById("rs").innerHTML="Result Division: "+result;
         }
     }
 </script>

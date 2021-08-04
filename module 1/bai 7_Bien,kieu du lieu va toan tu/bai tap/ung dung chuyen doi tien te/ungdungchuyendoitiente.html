@@ -28,7 +28,8 @@
                 <option value="VNĐ">VietNam</option>
             </select>
         </td>
-        <td><button onclick="convert()">Convert</button></td>
+        <td><button type="button" onclick="convert()">Convert</button></td>
+        <tr><td align="left" style="color: blue"><p id="rs"></p></td></tr>
     </tr>
 </table>
 </form>
@@ -37,14 +38,17 @@
         let input=document.getElementById("input").value;
         let option1=document.getElementById("option1").value;
         let option2=document.getElementById("option2").value;
-        if (option1=="USD" && option2=="VNĐ"){
-            document.write("Result: " +input*22955 +" VNĐ");
+        let result;
+        if (option1=="VNĐ" && option2=="USD"){
+            result=input/22955;
+            document.getElementById("rs").innerHTML="Result: "+result+" USD";
         }
-         else if (option1=="VNĐ" && option2=="USD"){
-            document.write("Result: "+input/22955+" USD");
+         else if (option1=="USD" && option2=="VNĐ"){
+             result=input*22955;
+            document.getElementById("rs").innerHTML="Result: "+result+" VNĐ";
         }
         else if(option1==option2){
-            alert("Error");
+            alert("Error!");
         }
     }
 </script>
