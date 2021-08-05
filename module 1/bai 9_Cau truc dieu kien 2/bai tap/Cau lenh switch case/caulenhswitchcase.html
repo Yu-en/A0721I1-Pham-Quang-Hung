@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hùng</title>
+</head>
+<body>
+<form>
+    <input id="month" type="text">
+    <button type="button" onclick="dayInMonth()">Tính số ngày</button>
+    <p id="day"></p>
+</form>
+<script>
+    function dayInMonth() {
+        let input=document.getElementById("month").value;
+        switch (input) {
+            case 1:
+                alert("2")
+                break;
+            case 2:
+                document.getElementById("day").innerHTML="Tháng 2 có 28 hoặc 29 ngày";
+                break;
+            default:
+                alert("Error");
+        }
+    }
+</script>
+</body>
+</html>

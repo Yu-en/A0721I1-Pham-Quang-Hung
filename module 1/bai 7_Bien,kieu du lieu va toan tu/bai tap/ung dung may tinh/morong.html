@@ -12,7 +12,8 @@
             <td colspan="4" id="input">0</td>
         </tr>
         <tr>
-            <td colspan="3"><button type="button" onclick="btn(this)">AC</button></td>
+            <td colspan="2"><button type="button" onclick="btn(this)">AC</button></td>
+            <td><button onclick="btn(this)">DEL</button></td>
             <td><button onclick="btn(this)">/</button></td>
         </tr>
         <tr>
@@ -55,6 +56,8 @@
             }else {
                 input.innerHTML+=a;
             }
+        }if (a=="DEL"){
+                input.innerHTML=
         }
     }
 </script>
