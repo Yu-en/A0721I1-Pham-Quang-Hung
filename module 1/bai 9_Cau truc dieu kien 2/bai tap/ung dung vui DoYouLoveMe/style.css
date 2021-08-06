@@ -1,0 +1,15 @@
+h1{
+    position:absolute;
+    left:200px;
+    top:135px;
+}
+#yes{
+    position:absolute;
+    left:245px;
+    top:195px;
+}
+#no{
+    position:absolute;
+    left:320px;
+    top:195px;
+}
