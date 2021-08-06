@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hùng</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <table>
+        <tr>
+            <td colspan="4" id="result" ></td>
+        </tr>
+        <tr>
+            <td><button class="btn" onclick="btn(this)">1</button></td>
+            <td><button class="btn" onclick="btn(this)">2</button></td>
+            <td><button class="btn" onclick="btn(this)">3</button></td>
+            <td><button class="btn" onclick="btn(this)">+</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn" onclick="btn(this)">4</button></td>
+            <td><button class="btn" onclick="btn(this)">5</button></td>
+            <td><button class="btn" onclick="btn(this)">6</button></td>
+            <td><button class="btn" onclick="btn(this)">-</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn" onclick="btn(this)">7</button></td>
+            <td><button class="btn" onclick="btn(this)">8</button></td>
+            <td><button class="btn" onclick="btn(this)">9</button></td>
+            <td><button class="btn" onclick="btn(this)">x</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn" onclick="btn(this)">C</button></td>
+            <td><button class="btn" onclick="btn(this)">0</button></td>
+            <td><button class="btn" onclick="btn(this)">=</button></td>
+            <td><button class="btn" onclick="btn(this)">/</button></td>
+        </tr>
+    </table>
+</div>
+<script>
+    let result=document.getElementById("result");
+    function btn(obj) {
+        let a=obj.innerHTML;
+        if (a=="="){
+            result.innerHTML=eval(result.innerHTML);
+        }else if (a=="C"){
+            result.innerHTML="";
+        }else {
+            if (result.innerHTML=="0"){
+                result.innerHTML=a;
+            }else {
+                result.innerHTML+=a;
+            }
+        }
+    }
+</script>
+</body>
+</html>
