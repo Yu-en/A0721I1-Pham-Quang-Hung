@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let soDien=parseInt(prompt("Số điện = "));
+        let tienDien;
+        if (soDien>0&&soDien<=100){
+            alert("Tiền điện tháng này là : "+(tienDien=soDien*1000)+" VNĐ");
+        }
+        else if(soDien>100) {
+            alert("Tiền điện tháng này là : "+(tienDien=soDien*1500)+" VNĐ");
+        }
+        else {
+            alert("Error!");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let thueSuat;
+    let soThue;
+    let luong=parseInt(prompt("Nhập số tiền lương: "));
+    if(luong>3000000)
+    {
+        thueSuat=30;
+        soThue=luong*30/100;
+
+    }
+    else if(luong>=1500000)
+    {
+        soThue=luong*20/100;
+        thueSuat=20;
+    }
+    else
+    {
+        soThue=luong*10/100;
+        thueSuat=10;
+    }
+    alert("Thuế thu nhập với mức thuế suất "+ thueSuat +"%= "+soThue);
+</script>
+</body>
+</html>
