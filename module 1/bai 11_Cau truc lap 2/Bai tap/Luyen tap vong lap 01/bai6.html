@@ -6,9 +6,17 @@
 </head>
 <body>
     <script>
-       let n=prompt("tổng của số chia hết cho 7 đầu tiên trong các số tự nhiên: ")
-       sum=((0+29)*n*7)/2;
-       alert(sum)
+       let k=0;
+       let sum=0;
+       let n=0;
+        while (k<30){
+            if (n%7==0){
+                sum+=n;
+                k++;
+            }
+            n++;
+        }
+        alert("Tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên là: "+sum);
     </script>
 </body>
 </html>
