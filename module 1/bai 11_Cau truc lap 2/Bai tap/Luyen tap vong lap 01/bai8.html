@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="text-align: center">
+<button type="button" onclick="btn()">Chơi</button>
+<script>
+    function btn() {
+        let n1=parseInt(prompt("Số nhỏ nhất"));
+        let n2=parseInt(prompt("Số lớn nhất"));
+        let x=Math.round((n2-n1)*Math.random()) + n1;
+        if ((n1==1 && n2==5)||(n1==6 && n2==10)){
+            let a=prompt("Đoán trong khoảng từ "+n1+"-"+n2);
+            for (let i=0;i<3;i++){
+                if (a==x){
+                    alert("Congratulation!!!!");
+                    break;
+                }
+                else if (a<x){
+                    alert("Bé hơn số ngẫu nhiên!");
+                    a=prompt("Nhập lại");
+                }else if (a>x){
+                    alert("Lớn hơn số ngẫu nhiên!");
+                    a=prompt("Nhập lại");
+                }
+            }
+            document.writeln("<button style='text-align: center' type='button' onclick='btn()'>Chơi lại</button>")
+        }else {
+            alert("Error!!!");
+        }
+
+    }
+</script>
+</body>
+</html>
