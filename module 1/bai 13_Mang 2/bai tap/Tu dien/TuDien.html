@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   Word:<input type="text" id="dictionary">
+   <input type="button" onclick="dtn()" value="Tra cứu">
+   <p id="rs"></p>
+<script>
+    function dtn() {
+        let arr1=["father","mother","son","daughter"];
+        let arr2=["cha","mẹ","con trai","con gái"];
+        let input=document.getElementById("dictionary").value;
+        for ( let i=0;i<(arr1.length && arr2.length);i++){
+            if (input===arr1[i]){
+                document.getElementById("rs").innerHTML=arr2[i];
+            }
+            else if (input===arr2[i]){
+                document.getElementById("rs").innerHTML=arr1[i];
+            }
+        }
+    }
+</script>
+</body>
+</html>

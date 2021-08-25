@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let swapCase = function(arrs){
+        let newArrs = "";
+        for(let i = 0; i<arrs.length; i++){
+            if(arrs[i] === arrs[i].toLowerCase()){
+                newArrs += arrs[i].toUpperCase();
+            }else {
+                newArrs += arrs[i].toLowerCase();
+            }
+        }
+        document.write(newArrs);
+        return newArrs;
+    }
+    let str=prompt();
+    let swappedStr = swapCase(str);
+</script>
+</body>
+</html>
