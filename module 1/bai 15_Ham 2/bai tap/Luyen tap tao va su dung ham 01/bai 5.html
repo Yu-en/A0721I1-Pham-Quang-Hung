@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findStar(input) {
+        let star1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let star2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        for (let i = 0; i <= star1.length; i++) {
+            if (input === star1[i]) {
+                star1[i] === star2[i];
+                return (star2[i]);
+            }
+        }
+        return ("Can't find this star");
+    }
+    let inputStar = prompt("Name of star");
+    document.write(findStar(inputStar));
+</script>
+</body>
+</html>
