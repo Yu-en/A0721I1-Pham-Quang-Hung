@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr=["a","c","a","d","e","c","c"];
+    function checkArr(arr) {
+        let count=0;
+        for (let i=0;i<arr.length;i++){
+            if (arr[i]==text){
+                count+=1;
+            }
+        }
+        if (count){
+            return count;
+        }
+        else {
+            return -1;
+        }
+    }
+    let text=prompt("Input a character");
+    alert("Số lần xuất hiện của ký tự "+ text+" là "+checkArr(arr));
+</script>
+</body>
+</html>
