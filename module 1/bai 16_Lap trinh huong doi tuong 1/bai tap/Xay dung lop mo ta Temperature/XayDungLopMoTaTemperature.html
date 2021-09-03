@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Temperature=function(celcius){
+        this.celcius=celcius;
+        if (celcius>=(-273)){
+            this.getCelcius=function () {
+                return celcius;
+            }
+            this.getFahrenheit=function () {
+                return (celcius*1.8)+32;
+            }
+            this.getKevin=function () {
+                return (celcius+273.15);
+            }
+        }else {
+            return alert("Nhiệt độ nhỏ hơn -273!!!");
+        }
+    }
+    let temperature=new Temperature(25);
+    let fahrenheit=temperature.getFahrenheit();
+    let kevin=temperature.getKevin();
+    alert("Fahrenheit = "+fahrenheit+" Kevin = "+kevin);
+</script>
+</body>
+</html>
