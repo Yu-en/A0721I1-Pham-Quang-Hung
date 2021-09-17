@@ -28,25 +28,23 @@
         }
     }
     class switchButton{
+        constructor(lamp,status) {
+            this.status=true;
+            this.lamp=lamp;
+        }
         connectToLamp(){
             this.lamp=lamp;
-            this.status=true;
-        }
-        getStatus(){
-            if (this.status){
-                console.log(this.lamp.status);
-            }
         }
         switchOff(){
             if (this.status){
                 this.lamp.turnOff();
-                this.getStatus();
+
             }
         }
         switchOn(){
             if (this.status){
                 this.lamp.turnOn();
-                this.getStatus();
+
             }
         }
     }

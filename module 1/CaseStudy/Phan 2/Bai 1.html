@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let luong=prompt("Tiền lương");
+    let thue;
+    let luongrong;
+    if (luong>15000000){
+        thue=0.2;
+        luongrong=luong-luong*thue;
+    }
+    if (7000000<luong<15000000){
+        thue=0.1;
+        luongrong=luong-luong*thue;
+    }
+    if (luong<7000000){
+        thue=0.05;
+        luongrong=luong-luong*thue;
+    }
+    alert("Tiền lương ròng là: "+luongrong+" và thuế thu nhập là "+(thue*luong));
+
+</script>
+</body>
+</html>
