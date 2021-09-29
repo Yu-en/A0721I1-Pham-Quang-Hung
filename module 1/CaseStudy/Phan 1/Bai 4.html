@@ -6,27 +6,26 @@
 </head>
 <body>
 <script>
-    let N = 15;
-    let text = " ";
-    for(let i=0;i<=N/2;i++) {
-        if (i == 7) {
-            text = text +"&nbsp;&nbsp";
-            for (let j=0; j<N; j++) {
-                text = text +"*";
-            }
-        } else {
-            for (let j=0;j<N;j++) {
-                let a = Math.ceil(N/2);
-                if (j == (a + i) || j == (a - i)) {
-                    text = text + "*";
-                } else {
-                    text = text + "&nbsp;&nbsp;"
-                }
-            }
-            text = text + "<br>";
+    let h=parseInt(prompt());
+    let w=h*2-1;
+    let shape="";
+    for (let i=1;i<=h;i++){
+        for (let j=0;j<w/2-i;j++){
+            shape+="&ensp;";
+
         }
+        for (let k=0;k<i*2-1;k++){
+            if (i===h){
+                shape+="*";
+            }else if (k===0||k===i*2-2){
+                shape+="*";
+            }else {
+                shape+="&ensp;";
+            }
+        }
+        shape+="<br>";
     }
-    document.writeln(text);
+    document.write(shape);
 </script>
 </body>
 </html>

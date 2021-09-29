@@ -6,17 +6,18 @@
 </head>
 <body>
 <script>
-    function prefix_sums(arr) {
-        let new_arr = [];
-        for (let i = 0; i < arr.length; i++) {
-            new_arr[i] = 0;
-            for (let j=0; j < i + 1; j++) {
-                new_arr[i] += arr[j];
-            }
-        }
-        return new_arr;
+    let a=[];
+    let b=[];
+    let temp=0;
+    let n=parseInt(prompt());
+    for (let i=0;i<n;i++){
+        a.push(parseInt(prompt()));
     }
-    console.log(prefix_sums([1, 2, 3]));
+    for (let i=0;i<a.length;i++){
+        temp+=a[i];
+        b[i]=temp;
+    }
+    alert( "Array a["+a+"]"+" Prefix sum of a : "+b);
 </script>
 </body>
 </html>

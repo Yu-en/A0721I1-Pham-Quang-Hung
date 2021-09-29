@@ -6,16 +6,17 @@
 </head>
 <body>
 <script>
-    let str=prompt();
-    str=str.split("");
-    for (let i=0;i<str.length;i++){
-        for (let j=i+1;j<str.length;j++){
-            if (str[j]==str[i]){
-                str.splice(j,1);
+    function a(str) {
+        let arr=[];
+        for (let i=0;i<str.length;i++){
+            if (arr.indexOf(str.charAt(i))===-1){
+                arr.push(str.charAt(i));
             }
         }
+        return arr.length;
     }
-    alert("Có "+str.length+" ký tự khác nhau");
+    let string=prompt();
+    alert("Có "+a(string)+" kí tự khác nhau!");
 </script>
 </body>
 </html>

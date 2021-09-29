@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function uocSo(a, b) {
+        let sum1 = 0;
+        let sum2 = 0;
+        for (let i = 0; i < a; i++) {
+            if (a % i == 0) {
+                sum1 += i;
+            }
+        }
+        for (let i = 0; i < b; i++) {
+            if (b % i == 0) {
+                sum2 += i;
+            }
+        }
+        if ((sum1 === b) && (sum2 === a)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    let n1 = parseInt(prompt("Số nguyên dương 1"));
+    let n2 = parseInt(prompt("Số nguyên dương 2"));
+    let flag = uocSo(n1, n2);
+    console.log(flag)
+</script>
+</body>
+</html>

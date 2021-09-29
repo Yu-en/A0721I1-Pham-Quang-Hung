@@ -6,21 +6,20 @@
 </head>
 <body>
 <script>
-    let text = " ";
-    let N = 15;
-    for(let i=0;i<=N/2;i++){
-        for(let j=1;j<=N;j++){
-            let a = Math.ceil(N/2);
-            if(j>=(a-i)&&j<=(a+i)){
-                text = text + "*";
-            }
-            else {
-                text = text + "&nbsp;&nbsp;";
-            }
+    let h=parseInt(prompt());
+    let w=h*2-1;
+    let shape="";
+    for (let i=1;i<=h;i++){
+        for (let j=1;j<w/2-i;j++){
+            shape+="&ensp;";
+
         }
-        text = text +"<br>";
+        for (let k=0;k<i*2-1;k++){
+            shape+="*";
+        }
+        shape+="<br>";
     }
-    document.writeln(text);
+    document.write(shape);
 </script>
 </body>
 </html>
